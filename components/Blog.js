@@ -17,13 +17,18 @@ class Blog extends React.Component {
   }
 
   render() {
-    return this.state.data.map(post => (
-      <Post
-        key={post.id}
-        title={post.title}
-        author={post.author}
-        date={post.date}
-      />
-    ));
+    return (
+      <div>
+        <h1>My firts blog</h1>
+        {this.state.data.map(post => (
+          <Post
+            key={post.id}
+            title={post.title}
+            author={post.author}
+            date={post.date}
+          />
+        ))}
+      </div>
+    );
   }
 }
